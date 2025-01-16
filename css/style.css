@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Ensure the body takes the full height of the viewport */
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Ensure the container takes the full height of the viewport */
+}
+
+.left-section {
+    width: 450px;
+    background-color:black;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+.left-section h1{
+    color: #d83956
+}
+
+.left-section img {
+    width: 60%; /* Adjust the width as needed */
+    height: auto;
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+.right-section {
+    margin-left: 470px;
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #ecf3f5;
+    height: 100vh; /* Ensure the right section takes the full height of the viewport */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+.right-section section {
+    width: 70%; /* Set the width of sections to 70% */
+    margin-bottom: 20px; /* Add space between sections */
+}
+
+.position {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add space between positions */
+    border: 2px solid #D20A2E; /* Solid border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside the border */
+    background-color: white; /* Background color for contrast */
+}
+
+.position img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 20px; /* Add space between the image and the text */
+    border-radius: 50%; /* Make the image round */
+}
+
+.position .text {
+    flex-grow: 1;
+}
