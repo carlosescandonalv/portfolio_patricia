@@ -34,8 +34,7 @@ body {
 }
 
 .right-section {
-    margin-left: 470px;
-    padding: 20px;
+    margin-left: 450px;
     flex-grow: 1;
     overflow-y: auto;
     background-color: #ecf3f5;
@@ -46,11 +45,18 @@ body {
     align-items: center; /* Center items horizontally */
 }
 
-.right-section section {
-    width: 70%; /* Set the width of sections to 70% */
+
+.right-section div {
+    width: 100%; /* Set the width of sections to 70% */
     margin-bottom: 20px; /* Add space between sections */
+
+    margin-left: auto; /* Center items within the right section */
+    margin-right: auto; 
 }
 
+.position_container{
+    padding-left: 30px;
+    padding-right: 30px;}
 .position {
     display: flex;
     align-items: center;
@@ -70,4 +76,117 @@ body {
 
 .position .text {
     flex-grow: 1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* EDUCATION */
+.education {
+    padding-bottom: 2em;
+    position:relative;
+}
+
+.timeline_section{
+    background-color: #24292d;
+    min-height: 100vh;
+    padding: 100px 15px;
+}
+
+.timeline{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.timeline::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #2f363e;
+    left: calc(50% - 1px)
+}
+
+.checkpoint{
+    margin-bottom: 40px ;
+    width: 100% !important;
+    position: relative !important;
+}
+
+.checkpoint:last-child{
+    margin-bottom:0;
+}
+
+.checkpoint:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.checkpoint:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+
+.timeline-dot{
+    height: 16px;
+    width:16px !important;
+    background-color: #eaa023;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top:10px;
+}
+
+
+.timeline-date{
+    font-size: 18px;
+    color: #eaa023;
+    margin: 15px 0 0;
+}
+
+.checkpoint-content{
+    background-color: #2f363e;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.checkpoint-content h3{
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.checkpoint-content p{
+    color: #c8c8c8;
+    font-size: 16px;
+    font-weight: 300;
+    line-height:22px;
+}
+
+
+/* responsive */
+@media(max-width: 767px){
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-items:nth-child(odd){
+        padding-right: 0;
+        text-align:left;
+    }
+    .timeline-items:nth-child(odd),
+    .timeline-items:nth-child(even){
+        padding-left: 37px;
+    }
+    .timeline-dot{
+        left:0;
+    }
 }
